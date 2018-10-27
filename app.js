@@ -12,9 +12,9 @@ var express         = require("express"),
 //REQUIRED ROUTES
 var indexRoute = require("./routes/index"),
     dataRoute = require("./routes/data")
-    
-// mongoose.connect("mongodb://localhost/cpmv3", {useNewUrlParser: true});
-mongoose.connect("mongodb://thomasmartin:Sic3ParvisMagna@ds143593.mlab.com:43593/datacapture", {useNewUrlParser: true});
+ 
+mongoose.connect(process.env.DATAURL, {useNewUrlParser: true});
+// mongoose.connect("mongodb://thomasmartin:Sic3ParvisMagna@ds143593.mlab.com:43593/datacapture", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({ extended : true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
