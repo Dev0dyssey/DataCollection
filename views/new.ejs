@@ -1,0 +1,303 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>CUSTOMER DATA CAPTURE FORM</h1>
+        </div>
+    </div>
+    
+    <form action="/data" method="POST">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="labelText">
+                        <label for="oppid">OPPORTUNITY ID:</label>
+                    </div>
+                    <input name="capture[oppid]" type="text" class="form-control" id="oppid" placeholder="OppID" required>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Nature of business:</label>
+                    <div class="radio">
+                        <label for="businesstype">
+                            <input name="capture[nature]" type="radio" class="businesstype" value="Sole Trader" id="soleTrader"> Sole Trader
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label for = "businesstype">
+                            <input name="capture[nature]" type="radio" class="businesstype" value="Limited Company" id="Ltd"> Limited Company
+                        </label> 
+                    </div>
+
+                    <div class="radio">
+                        <label for = "businesstype">
+                            <input name="capture[nature]" type="radio" class="businesstype" value="Partnership" id="partnership"> Partnership
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Type of business:</label>
+                    <div>
+                        <select name="capture[businessType]" class="form-control input" id="typeselect">
+                            <option class="business_type" value="New">New</option>
+                            <option class="business_type" value="Post Office">Post Office</option>
+                            <option class="business_type" value="Competitor">Competitor</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>VAT Registered</label>
+                            <div>
+                                <select name="capture[vat]" class="form-control input" id="vatstat">
+                                    <option class="vatstat" value="VAT Registered">VAT Registered</option>
+                                    <option class="vatstat" value="Non VAT Registered">Non VAT</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Competitor</label>
+                            <div>
+                                <select name="capture[competitors]" class="form-control input" id="competitor">
+                                    <option class="competitor" value="No Competitor">No Competitor</option>
+                                    <option class="competitor" value="Hermes">MyHermes</option>
+                                    <option class="competitor" value="DPD">DPD</option>
+                                    <option class="competitor" value="Yodel">Yodel</option>
+                                    <option class="competitor" value="UK Mail">UK Mail</option>
+                                    <option class="competitor" value="TNT">TNT</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Marketplaces</label>
+                    <div>
+                        <input name="capture[marketplaces]" type="checkbox" class="market" name="marketplace" value="Amazon"> Amazon
+                    </div>
+                    <div>
+                        <input name="capture[marketplaces]" type="checkbox" class="market" name="marketplace" value="eBay"> eBay
+                    </div>
+                    <div>
+                        <input name="capture[marketplaces]" type="checkbox" class="market" name="marketplace" value="Etsy"> Etsy
+                    </div>
+                    <div>
+                        <input name="capture[marketplaces]" type="checkbox" class="market" name="marketplace" value="nths"> Not On the High Street
+                    </div>
+                    <div>
+                        <input name="capture[marketplaces]" type="checkbox" class="market" name="marketplace" value="web"> Own Website
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <hr>
+        
+        <div class="row data">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div>
+                    <label>Nature of Goods</label>
+                    </div>
+                    <input type="text" name="capture[goods]" class="form-control input" id="goods">
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div>
+                    <label>Volumes</label>
+                    <input type="text" placeholder="Volume of goods" name="capture[volume]" class="form-control input" id="volumes">
+                    </div>
+                </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                            <label>Time</label>
+                            <div>
+                                <select name="capture[frequency]" class="form-control input" id="frequency">
+                                    <option class="frequency" value="Week">Weekly</option>
+                                    <option class="frequency" value="Month">Monthly</option>
+                                    <option class="frequency" value="Year">Yearly</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                            <label>Average Weight</label>
+                                <input type="text" name="capture[avgWeight]" class="form-control input" id="weights">
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Dimensions</label>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Letters"><input type="text" id="letterpercentage" class="volumePercentage" maxlength="2"> Letters
+                    </div>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Large Letters"><input type="text" class="volumePercentage" maxlength="2"> Large Letters
+                    </div>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Small Parcels"><input type="text" class="volumePercentage" maxlength="2"> Small Parcels
+                    </div>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Medium Parcels"><input type="text" class="volumePercentage" maxlength="2"> Medium Parcels
+                    </div>
+                </div>    
+            </div>       
+        </div>
+        <hr>
+        
+        <div class="row data">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Service Sold</label>
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="BPL"> BPL
+                    </div>
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="CRL"> CRL
+                    </div>
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="International"> International
+                    </div>
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="SD"> Special Delivery
+                    </div>
+                    
+<!--Perhaps change input type = numbers if users find the normal input confusing-->
+                    
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="Tracked" id="tpstpn"> Tracked
+                    </div>
+                    <div>
+                        <input class="form-control tracked price" id="tracked24" placeholder="Tracked 24">
+                    </div>
+                    <div>
+                        <input class="form-control tracked price" id="tracked48" placeholder="Tracked 48">                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="form-group">
+                <!--Perhaps another way to add an empty line to make all checkboxes aligned-->
+                    <br>
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="Zone Sort"> Zone Sort
+                    </div>
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="Country Sort"> Country Sort
+                    </div>
+                    <div>
+                        <input type="checkbox" class="services" name="service" value="Contract Services"> Contract Services
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div>
+                        <label>Collection</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="collection" value="Yes" class="collection"> Yes
+                    </div>
+                    <div>
+                        <input type="radio" name="collection" value="No" class="collection"> No
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    <div class="row">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
+            <button class="btn btn-danger" type="reset" value="Reset">Reset</button>
+        </div>
+        <div class="col-sm-5"></div>
+    </div>
+    </form>
+<hr>
+<div class="row" id="customerprofile">
+<div class="col-sm-2"></div>
+    <div class="col-sm-3 column">
+        <p>Opp id: <span id="opp"></span></p>
+        <p>Type of business: <span id="customertype"></span></p>
+        <p>Is the business new: <span id="businesstype"></span></p>
+        <p>VAT Status: <span id="vatStatus"></span></p>
+        <p>Competitor(s): <span id="competitors"></span></p>
+        <p>Marketplaces: <span id="markets"></span></p>
+    </div>
+    
+    <div class="col-sm-3">
+        <p>Nature of goods: <span id="goodsInfo"></span></p>
+        <p>Volumes: <span id="volume"></span>/<span id="time"></span></p>
+        <p>Average weight: <span id="weight"></span></p>
+        <p>Dimensions: <span id="dimension"></span></p>
+    </div>
+    
+    <div class="col-sm-3">
+        <p>Services sold: <span id="services"></span></p>
+        <p class="tracked">Tracked Pricing:
+        <br>
+            TPS: <span id="tps"></span>
+        <br>
+            TPN: <span id="tpn"></span>
+        </p>
+        <p>Collection Required: <span id="collection"></span>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary" id="compile">Compile</button>
+        </div>
+        <div class="col-sm-5"></div>
+    </div>
+    
+    
+</div>
+
+<% include partials/footer %>
+
+
+
+        <!--<div class="row">-->
+        <!--    <select name="capture[nature]">-->
+        <!--        <option value="Sole Trader">Sole Trader</option>-->
+        <!--        <option value="Limited Company">Limited Company</option>-->
+        <!--        <option value="Partnership">Partnership</option>-->
+        <!--    </select>-->
+        <!--</div>-->

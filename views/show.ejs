@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+<div class="container">
+    <div>
+        <p>
+            <h1>OPP ID: <%=client.oppid%></h1>
+            <p><strong>Nature of business</strong> <%=client.nature%></p>
+            <p><strong>Method of Posting:</strong> <%=client.businessType%></p>
+            <p><strong>Competitors:</strong> <%=client.competitors%></p>
+            <p><strong>VAT Status:</strong> <%=client.vat%></p>
+            <p><strong>Nature of goods:</strong> <%=client.goods%></p>
+            <p><strong>Volume of Items:</strong> <%=client.volume%></p>
+            <p><strong>Posting Frequency:</strong> <%=client.frequency%></p>
+            <p><strong>Average weight:</strong> <%=client.avgWeight%></p>
+            <p><strong>Dimensions: </strong> <%=client.dimension%></p>
+            <a class="btn btn-info" href="/data/<%=client._id%>/edit">Edit Information</a>
+        </p>
+    </div>
+    
+</div>
+
+
+<% include ./partials/footer %>

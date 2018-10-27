@@ -1,0 +1,31 @@
+<% include partials/header %>
+
+<div class="container">
+    <h1 class="row text-center">CPM DATA CAPTURE</h1>
+    <div>
+        <a class="btn btn-primary" href="/data/new">NEW DATA</a>
+    </div>
+    
+    <%clients.forEach(function(client){ %>
+        <div style="border: 1px solid black">
+        <h4><strong>Opp ID:</strong> <%=client.oppid%></h4>
+        <p><strong>Nature of business: </strong><%=client.nature%></p>
+        <p><strong>Type of Business:</strong> <%=client.businessType%></p>
+        <p><strong>Competitors:</strong> <%=client.competitors%></p>
+        <p><strong>VAT Status:</strong> <%=client.vat%></p>
+        <p><strong>Nature of goods:</strong> <%=client.goods%></p>
+        <p><strong>Volume of Items:</strong> <%=client.volume%></p>
+        <p><strong>Posting Frequency:</strong> <%=client.frequency%></p>
+        <p><strong>Average weight:</strong> <%=client.avgWeight%></p>
+        <p><strong>Marketplaces: </strong> <%=client.marketplaces%></p>
+        <p><strong>Dimensions: </strong> <%=client.dimension%></p>
+        <form id="delete" action="/data/<%=client._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-warning">Delete</button>
+        </form>
+        <a class="btn btn-default" href="/data/<%=client._id%>">More Info</a>
+        </div>
+    <% }) %>
+    
+</div>
+
+<% include partials/footer %>

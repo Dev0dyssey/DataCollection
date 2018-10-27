@@ -1,0 +1,124 @@
+<% include partials/header %>
+<div class="container">
+    <form action="/data/<%=client._id%>?_method=PUT" method="POST">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="labelText">
+                        <label for="oppid">OPPORTUNITY ID:</label>
+                    </div>
+                    <input name="capture[oppid]" type="text" class="form-control" id="oppid" placeholder="OppID" value="<%= client.oppid %>" required>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                <label>Type of business:</label>
+                    <div>
+                        <select name="capture[businessType]" class="form-control input" id="typeselect">
+                            <option class="business_type" value="New">New</option>
+                            <option class="business_type" value="Post Office">Post Office</option>
+                            <option class="business_type" value="Competitor">Competitor</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                <label>Nature of business:</label>
+                    <div class="radio">
+                        <label for="businesstype">
+                            <input name="capture[nature]" type="radio" class="businesstype" value="Sole Trader" id="soleTrader"> Sole Trader
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label for = "businesstype">
+                            <input name="capture[nature]" type="radio" class="businesstype" value="Limited Company" id="Ltd"> Limited Company
+                        </label> 
+                    </div>
+
+                    <div class="radio">
+                        <label for = "businesstype">
+                            <input name="capture[nature]" type="radio" class="businesstype" value="Partnership" id="partnership"> Partnership
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                <label>VAT Registered</label>
+                    <div>
+                        <select name="capture[vat]" class="form-control input" id="vatstat">
+                            <option class="vatstat" value="VAT Registered">VAT Registered</option>
+                            <option class="vatstat" value="Non VAT Registered">Non VAT</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Competitor</label>
+                            <div>
+                                <select name="capture[competitors]" class="form-control input" id="competitor">
+                                    <option class="competitor" value="No Competitor">No Competitor</option>
+                                    <option class="competitor" value="Hermes">MyHermes</option>
+                                    <option class="competitor" value="DPD">DPD</option>
+                                    <option class="competitor" value="Yodel">Yodel</option>
+                                    <option class="competitor" value="UK Mail">UK Mail</option>
+                                    <option class="competitor" value="TNT">TNT</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div>
+                    <label>Nature of Goods</label>
+                    </div>
+                    <input type="text" name="capture[goods]" class="form-control input" id="goods" value="<%= client.goods %>">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Dimensions</label>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Letters"><input type="text" id="letterpercentage" class="volumePercentage" maxlength="2"> Letters
+                    </div>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Large Letters"><input type="text" class="volumePercentage" maxlength="2"> Large Letters
+                    </div>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Small Parcels"><input type="text" class="volumePercentage" maxlength="2"> Small Parcels
+                    </div>
+                    <div>
+                        <input type="checkbox" class="size" name="capture[dimension]" value="Medium Parcels"><input type="text" class="volumePercentage" maxlength="2"> Medium Parcels
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <input class="btn btn-warning" type="submit">
+    </form>
+</div>
+
+
+
+
+
+
+
+<% include partials/footer %>
