@@ -13,7 +13,7 @@ var express         = require("express"),
 var indexRoute = require("./routes/index"),
     dataRoute = require("./routes/data")
     
-mongoose.connect("mongodb://localhost/cpmv2", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost/cpmv3", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({ extended : true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));

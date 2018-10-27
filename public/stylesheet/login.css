@@ -1,7 +1,18 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 #signUp {
     margin: auto;
 }
 
 .submit {
     padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
