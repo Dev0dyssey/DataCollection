@@ -13,7 +13,6 @@ var express         = require("express"),
 var indexRoute = require("./routes/index"),
     dataRoute = require("./routes/data")
  
-
 mongoose.connect(process.env.DATAURL, {useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({ extended : true }));
