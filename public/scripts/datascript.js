@@ -10,10 +10,11 @@
 /*global collection*/
 /*global addInfo*/
 /*global opp*/
+/*global vol*/
 
 
 let oppinfo = document.getElementById("oppid");
-let volume = document.getElementById("volumes");
+let volumes = document.getElementById("volumes");
 let compile = document.getElementById("compile");
 let businessinfo = document.getElementsByClassName("businesstype");
 let businessType = document.getElementById("customertype");
@@ -69,7 +70,7 @@ let press = document.getElementById("compile");
         goodsInfo.textContent = details;
         
         let volumes = document.getElementById("volumes").value;
-        volume.textContent = volumes;
+        vol.textContent = volumes;
         let frequency = document.getElementById("frequency").value;
         time.textContent = frequency;
         
@@ -78,7 +79,7 @@ let press = document.getElementById("compile");
         
         for(let i = 0; i < sizeInfo.length; i++) {
             let split = [lett.value, lgl.value, smp.value, mdp.value];
-            let per = (volume.value/100)*(split[i]);
+            let per = (volumes.value/100)*(split[i]);
             if(sizeInfo[i].checked){
                 dimensions.push
                     (sizeInfo[i].value 
