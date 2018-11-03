@@ -39,6 +39,21 @@ let email = document.getElementById("email");
 let table = document.getElementById("priceTable");
 let press = document.getElementById("compile");
 
+    $("#tpstpn").click(function(event){
+    $(".tracked").fadeToggle(250);
+});
+
+
+$(".size").click(function(){
+    for(let i = 0; i < sizeInfo.length; i++){
+        if(sizeInfo[i].checked){
+           visible[i].style.display =  "inline"; 
+        } else {
+            visible[i].style.display = "none";
+        }
+    }
+})
+    
     const businessInfo = () => {
         for (let i =0; i < businessinfo.length; i++){
             if(businessinfo[i].checked){
@@ -123,36 +138,36 @@ let press = document.getElementById("compile");
 
 // Email code below
 
-const emailcheck = () => {
-    let test = document.querySelectorAll(".name");
-    let title = document.getElementById("title");
-    let name = document.getElementById("cusName");
+// const emailcheck = () => {
+//     let test = document.querySelectorAll(".name");
+//     let title = document.getElementById("title");
+//     let name = document.getElementById("cusName");
     
-    test[0].classList.add("hide");
-    title.textContent = test[0].value;
-    test[1].classList.add("hide");
-    name.textContent = test[1].value;
+//     test[0].classList.add("hide");
+//     title.textContent = test[0].value;
+//     test[1].classList.add("hide");
+//     name.textContent = test[1].value;
 
-    switch(serviceArr[0]){
-        case "BPL":
-            choice.textContent = "1st and 2nd class service";
-            break;
-        case "CRL":
-            choice.textContent = "Royal Mail 24/48";
-            break;
-        case "Tracked":
-            choice.textContent = "Royal Mail Tracked 24/48";
-            break;
-        case "International":
-            choice.textContent = "International Business services";
-            break;
-        case "SD":
-            choice.textContent = "Guaranteed Next day Special Delivery";
-            break;
-        default:
-            choice.textContent = "Several Royal Mail services"
-        }
-}
+//     switch(serviceArr[0]){
+//         case "BPL":
+//             choice.textContent = "1st and 2nd class service";
+//             break;
+//         case "CRL":
+//             choice.textContent = "Royal Mail 24/48";
+//             break;
+//         case "Tracked":
+//             choice.textContent = "Royal Mail Tracked 24/48";
+//             break;
+//         case "International":
+//             choice.textContent = "International Business services";
+//             break;
+//         case "SD":
+//             choice.textContent = "Guaranteed Next day Special Delivery";
+//             break;
+//         default:
+//             choice.textContent = "Several Royal Mail services"
+//         }
+// }
 
 
 //RUN CODE ON CLICK
@@ -162,7 +177,7 @@ $("#compile").click(function(){
     details();
     serviceChoice();
     moreInfo();
-    emailcheck();
+    // emailcheck();
 })
 
 //RUN CODE ON KEYPRESS

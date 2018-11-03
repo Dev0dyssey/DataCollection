@@ -19,7 +19,7 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row data">
             <div class="col-sm-4">
                 <div class="form-group">
                     <label>Nature of business:</label>
@@ -111,6 +111,7 @@
             </div>
             
         </div>
+        
         <hr>
         
         <div class="row data">
@@ -240,7 +241,16 @@
             </div>
         
         </div>
+        
     <div class="row">
+        <div class="col col-sm-2"></div>
+        <div class="col col-sm-8">
+            <input type="textarea" class="form-control" rows="5" placeholder="Additional OPP Information" id="info">
+        </div>
+        <div class="col col-sm-2"></div>
+    </div>
+        
+    <div class="row control-btn">
         <div class="col-sm-5"></div>
         <div class="col-sm-2">
             <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
@@ -249,36 +259,52 @@
         <div class="col-sm-5"></div>
     </div>
     </form>
-<hr>
-<div class="row" id="customerprofile">
-<div class="col-sm-2"></div>
-    <div class="col-sm-3 column">
-        <p>Opp id: <strong><span id="opp"></span></strong></p>
-        <p>Type of business: <strong><span id="customertype"></span></strong></p>
-        <p>Is the business new: <strong><span id="businesstype"></span></strong></p>
-        <p>VAT Status: <strong><span id="vatStatus"></span></strong></p>
-        <p>Competitor(s): <strong><span id="competitors"></span></strong></p>
-        <p>Marketplaces: <strong><span id="markets"></span></strong></p>
-    </div>
     
-    <div class="col-sm-3">
-        <p>Nature of goods: <strong><span id="goodsInfo"></span></strong></p>
-        <p>Volumes: <span id="vol"><strong></span>/<span id="time"></span></strong></p>
-        <p>Average weight: <strong><span id="weight"></span></strong></p>
-        <p>Dimensions: <strong><span id="dimension"></span></strong></p>
+    <hr>
+
+    <div class="row" id="customerprofile">
+    <div class="col-sm-2"></div>
+        <div class="col-sm-3 column">
+            <p>Opp id: <strong><span id="opp"></span></strong></p>
+            <p>Type of business: <strong><span id="customertype"></span></strong></p>
+            <p>Is the business new: <strong><span id="businesstype"></span></strong></p>
+            <p>VAT Status: <strong><span id="vatStatus"></span></strong></p>
+            <p>Competitor(s): <strong><span id="competitors"></span></strong></p>
+            <p>Marketplaces: <strong><span id="markets"></span></strong></p>
+        </div>
+        
+        <div class="col-sm-3">
+            <p>Nature of goods: <strong><span id="goodsInfo"></span></strong></p>
+            <p>Volumes: <span id="vol"><strong></span>/<span id="time"></span></strong></p>
+            <p>Average weight: <strong><span id="weight"></span></strong></p>
+            <p>Dimensions: <strong><span id="dimension"></span></strong></p>
+        </div>
+        
+        <div class="col-sm-3">
+            <p>Services sold: <strong><span id="services"></span></strong></p>
+            <p class="tracked">Tracked Pricing:
+            <br>
+                TPS: <span id="tps"></span>
+            <br>
+                TPN: <span id="tpn"></span>
+            </p>
+            <p>Collection Required: <strong><span id="collection"></strong></span>
+        </div>
     </div>
+
+    <br>
+    <br>
     
-    <div class="col-sm-3">
-        <p>Services sold: <strong><span id="services"></span></strong></p>
-        <p class="tracked">Tracked Pricing:
-        <br>
-            TPS: <span id="tps"></span>
-        <br>
-            TPN: <span id="tpn"></span>
-        </p>
-        <p>Collection Required: <strong><span id="collection"></strong></span>
+    <div class="row">
+        <div class="col col-sm-2"></div>
+        <div class="col col-sm-6" id="infobox">
+            <p>Additional Information: 
+                <br>
+            <span id="addInfo"></span></p>
+        </div>
+        <div class="col col-sm-4"></div>
     </div>
-</div>
+
     <div class="row">
         <div class="col-sm-5"></div>
         <div class="col-sm-2">

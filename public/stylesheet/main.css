@@ -5,3 +5,86 @@
 .submit {
     padding-top: 0.5em;
 }
+
+body {
+    background-size: cover;   
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 35px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h5 {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+p span {
+    font-weight: bold;
+}
+
+
+.labelText {
+    text-align: center;
+}
+
+.control-btn {
+   margin-top: 1em;
+}
+
+.data {
+    padding-left: 17%;
+}
+
+.input {
+    width: 50%;
+}
+
+.tracked {
+    display: none;
+}
+
+.price {
+    width: 35%;
+}
+
+.volumePercentage {
+    width: 10%;
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+#customerprofile {
+    margin-top: 100px;
+}
+
+#oppid {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+#infobox {
+    text-align: justify;
+}
+
+#addInfo {
+    text-align: left;
+}
+
+#ename {
+    width: 15%;
+    height: 20px;
+}
