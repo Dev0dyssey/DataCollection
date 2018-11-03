@@ -14,7 +14,7 @@
 
 
 let oppinfo = document.getElementById("oppid");
-let volumes = document.getElementById("volumes");
+let volume = document.getElementById("volumes");
 let compile = document.getElementById("compile");
 let businessinfo = document.getElementsByClassName("businesstype");
 let businessType = document.getElementById("customertype");
@@ -36,7 +36,6 @@ let mdp = document.getElementById("medparcel");
 let addinfo = document.getElementById("info");
 let box = document.getElementById("addInfo");
 let email = document.getElementById("email");
-let choice = document.getElementById("choice");
 let table = document.getElementById("priceTable");
 let press = document.getElementById("compile");
 
@@ -79,7 +78,7 @@ let press = document.getElementById("compile");
         
         for(let i = 0; i < sizeInfo.length; i++) {
             let split = [lett.value, lgl.value, smp.value, mdp.value];
-            let per = (volumes.value/100)*(split[i]);
+            let per = (volume.value/100)*(split[i]);
             if(sizeInfo[i].checked){
                 dimensions.push
                     (sizeInfo[i].value 
@@ -101,7 +100,6 @@ let press = document.getElementById("compile");
             if(serviceSelect[i].checked) {
                 serviceArr.push(serviceSelect[i].value);
                 services.textContent = serviceArr.toString();
-                choice.textContent = serviceArr.toString()
             }
         }
         
