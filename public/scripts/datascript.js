@@ -11,6 +11,7 @@
 /*global addInfo*/
 /*global opp*/
 /*global vol*/
+/*global image */
 
 
 let oppinfo = document.getElementById("oppid");
@@ -135,6 +136,32 @@ $(".size").click(function(){
         let testInfo = document.getElementById("info").value;
         addInfo.textContent = testInfo;
     }
+    
+    const emailcheck = () => {
+        var table = document.getElementById("testimg");
+        if(serviceArr.indexOf("BPL")!== -1 && serviceArr.indexOf("CRL") === -1){
+            table.src="https://bit.ly/2Dm8ugW";
+        } else if(serviceArr.indexOf("CRL")!== -1 && serviceArr.indexOf("BPL") === -1){
+            table.src="https://bit.ly/2RB0aNI";
+        } else if(serviceArr.indexOf("BPL" && "CRL") !== -1){
+            table.src="https://bit.ly/2PajNiE";
+        }
+        // if(serviceArr.includes("BPL")){
+        //     table.src="https://bit.ly/2QgVSul";
+        // } else if(serviceArr.includes("CRL")){
+        //     table.src="https://bit.ly/2PabWl2";
+        // } else if(serviceArr.indexOf("BPL" && "CRL") !== -1){
+        //     table.src="https://bit.ly/2CZbgYG";
+        // }
+        // switch(serviceArr[0]){
+        //     case "BPL":
+        //         table.src="https://bit.ly/2QgVSul";
+        //         break;
+        //     case "CRL":
+        //         table.src="https://bit.ly/2PabWl2";
+        //         break;
+        // }
+    }
 
 // Email code below
 
@@ -177,7 +204,7 @@ $("#compile").click(function(){
     details();
     serviceChoice();
     moreInfo();
-    // emailcheck();
+    emailcheck();
 })
 
 //RUN CODE ON KEYPRESS
